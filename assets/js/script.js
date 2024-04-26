@@ -1,4 +1,5 @@
 // for of loop checks for any button presses once the dom content has loaded
+let cardsClicked = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttonsClickable = document.getElementsByTagName("button");
@@ -13,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     endGame();
                     break;
                 case "card":
-                    console.log("tba");
+                    let cardId = this.getAttribute("id");
+                    clickOnEmoji(cardId);
                     break;
                 case "default":
                     console.log("default");
@@ -55,10 +57,19 @@ function shuffleEmojis() {
 }
 
 /**
- * Handles when a user selects a tile
+ * Handles when a user selects a tile, flips tile over, checks if two have been selected
  */
-function clickOnEmoji() {
-
+function clickOnEmoji(cardId) {
+    cardsClicked++;
+    if (cardsClicked === 2){
+        console.log("Cards Clicked: " + cardsClicked);
+        cardsClicked = 0;
+        console.log("Cards reset. Cards Clicked: " + cardsClicked);
+    } else {
+        console.log("Cards Clicked:" + cardsClicked);
+    }
+    console.log("Card Id: " + cardId);
+    
 }
 
 /**
