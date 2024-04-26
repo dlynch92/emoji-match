@@ -17,38 +17,42 @@
         <!-- Shows instructions and start game button-->
         <div id="start-screen">
             <p> this is the start </p>
-            <button type="start-button" onclick="startGame();">Start Game</button>
+            <button data-type="start" class="start-button">Start Game</button>
         </div>
 
         <!-- The actual game area, displays cards and has scores tallying below them -->
         <div id="game-screen">
             <div id="card-display">
                 <!-- 4 x 4 grid to display the cards, id is two numbers: row-column e.g 4-1 is bottom row left-most box -->
-               <button id ="1-1" class="emoji-card"> </button>
-               <button id ="1-2" class="emoji-card"> </button>
-               <button id ="1-3" class="emoji-card"> </button>
-               <button id ="1-4" class="emoji-card"> </button>
-               <button id ="2-1" class="emoji-card"> </button>
-               <button id ="2-2" class="emoji-card"> </button>
-               <button id ="2-3" class="emoji-card"> </button>
-               <button id ="2-4" class="emoji-card"> </button>
-               <button id ="3-1" class="emoji-card"> </button>
-               <button id ="3-2" class="emoji-card"> </button>
-               <button id ="3-3" class="emoji-card"> </button>
-               <button id ="3-4" class="emoji-card"> </button>
-               <button id ="4-1" class="emoji-card"> </button>
-               <button id ="4-2" class="emoji-card"> </button>
-               <button id ="4-3" class="emoji-card"> </button>
-               <button id ="4-4" class="emoji-card"> </button>
+               <button id ="1-1" data-type="card" class="emoji-card"> </button>
+               <button id ="1-2" data-type="card" class="emoji-card"> </button>
+               <button id ="1-3" data-type="card" class="emoji-card"> </button>
+               <button id ="1-4" data-type="card" class="emoji-card"> </button>
+               <button id ="2-1" data-type="card" class="emoji-card"> </button>
+               <button id ="2-2" data-type="card" class="emoji-card"> </button>
+               <button id ="2-3" data-type="card" class="emoji-card"> </button>
+               <button id ="2-4" data-type="card" class="emoji-card"> </button>
+               <button id ="3-1" data-type="card" class="emoji-card"> </button>
+               <button id ="3-2" data-type="card" class="emoji-card"> </button>
+               <button id ="3-3" data-type="card" class="emoji-card"> </button>
+               <button id ="3-4" data-type="card" class="emoji-card"> </button>
+               <button id ="4-1" data-type="card" class="emoji-card"> </button>
+               <button id ="4-2" data-type="card" class="emoji-card"> </button>
+               <button id ="4-3" data-type="card" class="emoji-card"> </button>
+               <button id ="4-4" data-type="card" class="emoji-card"> </button>
 
             </div>
             <div id="score-display">
+                <p> this is the game </p>
+                <button data-type="end" class="start-button">Temporary finish game</button>
             </div>
         </div>
 
         <!-- Game has ended, shows scores and has replay button that resets the game-->
-        <div id="end-screen"></div>
-
+        <div id="end-screen">
+            <p> this is the end-screen </p>
+            <button data-type="start" class="start-button">Start Game</button>
+        </div>
     </div>
 
 

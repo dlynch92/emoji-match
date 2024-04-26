@@ -1,5 +1,28 @@
+// for of loop checks for any button presses once the dom content has loaded
 
-/**
+document.addEventListener("DOMContentLoaded", function() {
+    let buttonsClickable = document.getElementsByTagName("button");
+    for (let button of buttonsClickable){
+        button.addEventListener("click", function(){
+            let buttonDataType = this.getAttribute("data-type");
+            switch (buttonDataType){
+                case "start":
+                    startGame();
+                    break;
+                case "end": 
+                    endGame();
+                    break;
+                case "card":
+                    console.log("tba");
+                    break;
+                case "default":
+                    console.log("default");
+            }
+        });
+    }
+});
+
+/*
  * Start the game & swap the screens
  */
 function startGame() {
@@ -69,6 +92,9 @@ function toggleButtons() {
  * Hide game area after a game has ended and display the end screen
  */
 function endGame() {
-
+    let gameScreen = document.getElementById("game-screen");
+    let endScreen = document.getElementById("end-screen");
+    endScreen.style.display = "block";
+    gameScreen.style.display = "none";
 }
 
