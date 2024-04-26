@@ -25,6 +25,15 @@
     justify-content: center;
 }
 
+#score-display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#score-display > button{
+    flex-basis: 100%;
+}
 #game-screen{
     display: none;
 }
