@@ -1,5 +1,16 @@
+* {
+    font-family: "Anek Devanagari", sans-serif;
+    font-weight: 450;
+}
+
 .header{
     text-align: center;
+    font-size: 10vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+  
 }
 
 /*the area of the entire game regardless of the screen*/
