@@ -42,6 +42,12 @@ function removeEmoji {
 }
 
 /**
+ * Sets whether or not the cards are clickable by the user - need a few seconds each time a pair is selected where they are unable to be clicked.
+ */
+function toggleButtons {
+
+}
+/**
  * Hide game area after a game has ended and display the end screen
  */
 function endGame {
