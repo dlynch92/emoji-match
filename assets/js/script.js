@@ -2,6 +2,8 @@ let cardsClicked = 0;
 let cards = [];
 let score = 0;
 let timer;
+let card1;
+let card2;
 
 // for of loop checks for any button presses once the dom content has loaded
 
@@ -18,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     endGame();
                     break;
                 case "card":
-                    let cardId = this.getAttribute("id");
-                    clickOnEmoji(cardId);
+                    let cardType = this.getAttribute("class");
+                    clickOnEmoji(cardType);
                     break;
                 case "default":
                     console.log("default");
@@ -61,26 +63,27 @@ function shuffleEmojis() {
 }
 
 /**
- * Handles when a user selects a tile, flips tile over, checks if two have been selected
+ * Handles when a user selects a tile, flips tile over, checks if two have been selected and sees if they match
  */
-function clickOnEmoji(cardId) {
+function clickOnEmoji(cardType) {
+
     cardsClicked++;
     if (cardsClicked === 2){
-        console.log("Cards Clicked: " + cardsClicked);
+        card2 = cardType;
+        if (card1 === card2){
+            console.log("woooo")
+        } else {
+            console.log("awww")
+            incrementScore();
+        }
         cardsClicked = 0;
-        console.log("Cards reset. Cards Clicked: " + cardsClicked);
-    } else {
-        console.log("Cards Clicked:" + cardsClicked);
-    }
-    console.log("Card Id: " + cardId);
-    
+
+    } else if (cardsClicked === 1){
+        card1 = cardType;
+
 }
 
-/**
- * Check if two selected tiles are a match
- */
-function checkForMatch() {
-
+    
 }
 
 /**
