@@ -28,8 +28,37 @@
     margin: 15px;
     max-width: 75px;
     max-height: 75px;
-    background: center/75% no-repeat;
+}
+.crying-emoji{
+    background: url(../images/crying-emoji.webp) center/75% no-repeat;;
+}
 
+.eye-roll-emoji{
+    background: url(../images/eye-roll-emoji.webp) center/75% no-repeat;;
+}
+
+.grimacing-emoji{
+    background: url(../images/grimacing-emoji.webp) center/75% no-repeat;;
+}
+
+.neutral-emoji{
+    background: url(../images/neutral-emoji.webp) center/75% no-repeat;;
+}
+
+.sad-emoji{
+    background: url(../images/sad-emoji.webp) center/75% no-repeat;;
+}
+
+.smiling-emoji{
+    background: url(../images/smiling-emoji.webp) center/75% no-repeat;;
+}
+
+.surprised-emoji{
+    background: url(../images/surprised-emoji.webp) center/75% no-repeat;;
+}
+
+.tongue-emoji{
+    background: url(../images/tongue-emoji.webp) center/75% no-repeat;;
 }
 
 /*flex for cards */
