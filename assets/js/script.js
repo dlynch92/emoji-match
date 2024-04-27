@@ -90,7 +90,8 @@ function clickOnEmoji(cardType) {
  * Increments the score if the selected tiles are not a match
  */
 function incrementScore() {
-
+    score++;
+    document.getElementById("incorrect-guesses").innerHTML = score;
 }
 
 /**
