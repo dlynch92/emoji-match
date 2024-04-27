@@ -1,5 +1,9 @@
-// for of loop checks for any button presses once the dom content has loaded
 let cardsClicked = 0;
+let cards = [];
+let score = 0;
+let timer;
+
+// for of loop checks for any button presses once the dom content has loaded
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttonsClickable = document.getElementsByTagName("button");
@@ -46,7 +50,7 @@ function startGame() {
         gameScreen.style.display = "block";
     }
 
-    //put functions to randomise & set the emojis here and start the game
+    shuffleEmojis();
 }
 
 /**
