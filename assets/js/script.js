@@ -1,5 +1,5 @@
 let cardsClicked = 0;
-let cards = [];
+const cards = document.querySelectorAll(".emoji-card");
 let score = 0;
 let timer;
 let card1;
@@ -60,7 +60,11 @@ function startGame() {
  */
 function shuffleEmojis() {
 
-}
+        for (let i = 0; i < cards.length; i++) {
+            let changeOrder = Math.floor(Math.random() * 15);
+            cards[i].style.order = changeOrder;
+     }
+ }
 
 /**
  * Handles when a user selects a tile, flips tile over, checks if two have been selected and sees if they match
