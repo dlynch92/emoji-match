@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 let cardsClicked = 0;
 const cards = document.querySelectorAll(".emoji-card");
 let score = 0;
@@ -64,6 +66,8 @@ function startGame() {
  * Randomise and allocate emojis to the grid, also ensures they are all hidden and in a default state
  */
 function shuffleEmojis() {
+    
+    cardsClicked = 0;
 
         for (let i = 0; i < cards.length; i++) {
             let changeOrder = Math.floor(Math.random() * 15);
@@ -91,11 +95,11 @@ if (selectedCard.style.opacity != 0.3) {
         card2 = selectedCard;
         card2Class = card2.getAttribute("class");
         if (card1Class === card2Class){
-            console.log("woooo")
+            console.log("woooo");
             incrementScore();
             removeEmoji(card1, card2);
         } else {
-            console.log("awww")
+            console.log("awww");
             incrementScore();
             flipCards(card1, card2);
         }
@@ -113,12 +117,12 @@ if (selectedCard.style.opacity != 0.3) {
 
 function flipCards(card1, card2){
 
-    toggleButtons()
+    toggleButtons();
 
     setTimeout(function() {
         card1.classList.toggle('hide-card');
         card2.classList.toggle('hide-card');
-        toggleButtons()
+        toggleButtons();
       }, 2000);
   
 }
