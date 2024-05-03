@@ -56,13 +56,14 @@ function startGame() {
 }
 
 /**
- * Randomise and allocate emojis to the grid
+ * Randomise and allocate emojis to the grid, also ensures they are all visible
  */
 function shuffleEmojis() {
 
         for (let i = 0; i < cards.length; i++) {
             let changeOrder = Math.floor(Math.random() * 15);
             cards[i].style.order = changeOrder;
+            cards[i].style.display = "block";
      }
  }
 
@@ -77,6 +78,7 @@ function clickOnEmoji(cardType) {
         if (card1 === card2){
             console.log("woooo")
             incrementScore();
+            removeEmoji(card1, card2);
         } else {
             console.log("awww")
             incrementScore();
@@ -102,8 +104,9 @@ function incrementScore() {
 /**
  * Removes the emojis from the grid if the user has found a match
  */
-function removeEmoji() {
-
+function removeEmoji(card1, card2) {
+    console.log(card1 + card2);
+    card1.style.display = "none";
 }
 
 /**
