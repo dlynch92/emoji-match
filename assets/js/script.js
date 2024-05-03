@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 let cardsClicked = 0;
 const cards = document.querySelectorAll(".emoji-card");
 let score = 0;
@@ -79,6 +77,7 @@ function shuffleEmojis() {
 
                 if (cards[i].style.opacity === "0.3"){
                     cards[i].style.opacity = "1";
+                    cards[i].style.borderColor = "black";
                 }
             
      }
@@ -141,8 +140,9 @@ function incrementScore() {
 function removeEmoji(card1, card2) {
 
     card1.style.opacity = (0.3);
+    card1.style.borderColor = "transparent";
     card2.style.opacity = (0.3);
- 
+    card2.style.borderColor = "transparent";
  }
 
 /**
