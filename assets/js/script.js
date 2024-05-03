@@ -76,6 +76,7 @@ function clickOnEmoji(cardType) {
         card2 = cardType;
         if (card1 === card2){
             console.log("woooo")
+            incrementScore();
         } else {
             console.log("awww")
             incrementScore();
@@ -95,7 +96,7 @@ function clickOnEmoji(cardType) {
  */
 function incrementScore() {
     score++;
-    document.getElementById("incorrect-guesses").innerHTML = score;
+    document.getElementById("score").innerHTML = score;
 }
 
 /**
