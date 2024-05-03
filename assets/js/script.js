@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     endGame();
                     break;
                 case "card":
-                    let cardType = this.getAttribute("class");
+                    //let cardType = this.getAttribute("class");
                     let selectedCard = this;
                     console.log(selectedCard);
-                    clickOnEmoji(cardType, selectedCard);
+                    clickOnEmoji(selectedCard);
                     break;
                 case "default":
                     console.log("default");
@@ -59,14 +59,13 @@ function startGame() {
 }
 
 /**
- * Randomise and allocate emojis to the grid, also ensures they are all visible
+ * Randomise and allocate emojis to the grid, also ensures they are all hidden and in a default
  */
 function shuffleEmojis() {
 
         for (let i = 0; i < cards.length; i++) {
             let changeOrder = Math.floor(Math.random() * 15);
             cards[i].style.order = changeOrder;
-            cards[i].style.display = "block";
             cards[i].classList.toggle("hide-card");
      }
  }
@@ -74,23 +73,26 @@ function shuffleEmojis() {
 /**
  * Handles when a user selects a tile, flips tile over, checks if two have been selected and sees if they match
  */
-function clickOnEmoji(cardType, selectedCard) {
+function clickOnEmoji(selectedCard) {
 
     cardsClicked++;
     if (cardsClicked === 2){
-        card2 = cardType;
-        if (card1 === card2){
+        card2 = selectedCard;
+        card2Class = card2.getAttribute("class");
+        if (card1Class === card2Class){
             console.log("woooo")
             incrementScore();
             removeEmoji(card1, card2);
         } else {
             console.log("awww")
             incrementScore();
+            flipCards(card1, card2);
         }
         cardsClicked = 0;
 
     } else if (cardsClicked === 1){
-        card1 = cardType;
+        card1 = selectedCard;
+        card1Class = card1.getAttribute("class");
 
 }
 
@@ -98,6 +100,14 @@ selectedCard.classList.toggle('hide-card');
     
 }
 
+function flipCards(card1, card2){
+
+    setTimeout(function() {
+        card1.classList.toggle('hide-card');
+        card2.classList.toggle('hide-card');
+      }, 2000);
+  
+}
 /**
  * Increments the score if the selected tiles are not a match
  */
@@ -111,13 +121,11 @@ function incrementScore() {
  */
 function removeEmoji(card1, card2) {
 
-    //for (let i = 0; i < pickedCards.length; i++) {
-     //   pickedCards[i].style.display = "none";
-//    }
-      //  pickedCards[0].style.display = "none";
- //       card1.style.display = "none";
  
-}
+    card1.style.opacity = (0.5);
+    card2.style.opacity = (0.5);
+ 
+ }
 
 /**
  * Sets whether or not the cards are clickable by the user - need a few seconds each time a pair is selected where they are unable to be clicked.
