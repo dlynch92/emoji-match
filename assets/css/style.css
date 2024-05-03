@@ -30,6 +30,7 @@
     max-height: 75px;
     display: none;
 }
+
 .crying-emoji{
     background: url(../images/crying-emoji.webp) center/75% no-repeat;;
 }
@@ -60,6 +61,10 @@
 
 .tongue-emoji{
     background: url(../images/tongue-emoji.webp) center/75% no-repeat;;
+}
+
+.hide-card{
+    background: url(../images/question-mark.png) center/75% no-repeat;
 }
 
 /*flex for cards */

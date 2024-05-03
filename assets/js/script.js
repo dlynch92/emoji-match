@@ -1,5 +1,6 @@
 let cardsClicked = 0;
 const cards = document.querySelectorAll(".emoji-card");
+let pickedCards = [];
 let score = 0;
 let timer;
 let card1;
@@ -21,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     break;
                 case "card":
                     let cardType = this.getAttribute("class");
-                    clickOnEmoji(cardType);
+                    let selectedCard = this;
+                    console.log(selectedCard);
+                    clickOnEmoji(cardType, selectedCard);
                     break;
                 case "default":
                     console.log("default");
@@ -64,13 +67,14 @@ function shuffleEmojis() {
             let changeOrder = Math.floor(Math.random() * 15);
             cards[i].style.order = changeOrder;
             cards[i].style.display = "block";
+            cards[i].classList.toggle("hide-card");
      }
  }
 
 /**
  * Handles when a user selects a tile, flips tile over, checks if two have been selected and sees if they match
  */
-function clickOnEmoji(cardType) {
+function clickOnEmoji(cardType, selectedCard) {
 
     cardsClicked++;
     if (cardsClicked === 2){
@@ -90,6 +94,7 @@ function clickOnEmoji(cardType) {
 
 }
 
+selectedCard.classList.toggle('hide-card');
     
 }
 
@@ -105,8 +110,13 @@ function incrementScore() {
  * Removes the emojis from the grid if the user has found a match
  */
 function removeEmoji(card1, card2) {
-    console.log(card1 + card2);
-    card1.style.display = "none";
+
+    //for (let i = 0; i < pickedCards.length; i++) {
+     //   pickedCards[i].style.display = "none";
+//    }
+      //  pickedCards[0].style.display = "none";
+ //       card1.style.display = "none";
+ 
 }
 
 /**
@@ -124,4 +134,3 @@ function endGame() {
     endScreen.style.display = "block";
     gameScreen.style.display = "none";
 }
-
