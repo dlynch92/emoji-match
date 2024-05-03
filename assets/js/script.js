@@ -75,7 +75,7 @@ function shuffleEmojis() {
  * Handles when a user selects a tile, flips tile over, checks if two have been selected and sees if they match
  */
 function clickOnEmoji(selectedCard) {
-
+if (selectedCard.style.opacity != 0.3) {
     cardsClicked++;
     if (cardsClicked === 2){
         card2 = selectedCard;
@@ -95,10 +95,10 @@ function clickOnEmoji(selectedCard) {
         card1 = selectedCard;
         card1Class = card1.getAttribute("class");
 
-}
+    }
+    selectedCard.classList.toggle('hide-card');
 
-selectedCard.classList.toggle('hide-card');
-    
+}    
 }
 
 function flipCards(card1, card2){
