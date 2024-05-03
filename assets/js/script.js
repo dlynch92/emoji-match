@@ -1,10 +1,11 @@
 let cardsClicked = 0;
 const cards = document.querySelectorAll(".emoji-card");
-let pickedCards = [];
 let score = 0;
 let timer;
 let card1;
 let card2;
+let card1Class;
+let card2Class;
 let buttonsDisabled = false;
 
 // for of loop checks for any button presses once the dom content has loaded
@@ -60,14 +61,22 @@ function startGame() {
 }
 
 /**
- * Randomise and allocate emojis to the grid, also ensures they are all hidden and in a default
+ * Randomise and allocate emojis to the grid, also ensures they are all hidden and in a default state
  */
 function shuffleEmojis() {
 
         for (let i = 0; i < cards.length; i++) {
             let changeOrder = Math.floor(Math.random() * 15);
             cards[i].style.order = changeOrder;
-            cards[i].classList.toggle("hide-card");
+                if (cards[i].classList.contains("hide-card")){
+                 } else {
+                    cards[i].classList.toggle("hide-card");
+                }
+
+                if (cards[i].style.opacity === "0.3"){
+                    cards[i].style.opacity = "1";
+                }
+            
      }
  }
 
@@ -75,6 +84,7 @@ function shuffleEmojis() {
  * Handles when a user selects a tile, flips tile over, checks if two have been selected and sees if they match
  */
 function clickOnEmoji(selectedCard) {
+
 if (selectedCard.style.opacity != 0.3) {
     cardsClicked++;
     if (cardsClicked === 2){
@@ -92,8 +102,8 @@ if (selectedCard.style.opacity != 0.3) {
         cardsClicked = 0;
 
     } else if (cardsClicked === 1){
-        card1 = selectedCard;
-        card1Class = card1.getAttribute("class");
+       card1 = selectedCard;
+       card1Class = card1.getAttribute("class");
 
     }
     selectedCard.classList.toggle('hide-card');
