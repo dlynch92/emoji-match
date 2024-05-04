@@ -66,6 +66,7 @@ function startGame() {
 function shuffleEmojis() {
     
     cardsClicked = 0;
+    score = 0;
 
         for (let i = 0; i < cards.length; i++) {
             let changeOrder = Math.floor(Math.random() * 15);
