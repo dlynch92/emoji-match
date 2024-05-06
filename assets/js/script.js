@@ -4,8 +4,6 @@ let score = 0;
 let timer;
 let card1;
 let card2;
-let card1Class;
-let card2Class;
 let buttonsDisabled = false;
 let pairsMade = 0;
 
@@ -93,11 +91,13 @@ function shuffleEmojis() {
 function clickOnEmoji(selectedCard) {
 
 if (selectedCard.style.opacity != 0.3) {
+
+    selectedCard.classList.toggle('hide-card');
     cardsClicked++;
+
     if (cardsClicked === 2){
         card2 = selectedCard;
-        card2Class = card2.getAttribute("class");
-        if (card1Class === card2Class){
+        if (card1.getAttribute("class") === card2.getAttribute("class")){
             console.log("woooo");
             pairsMade++;
             incrementScore();
@@ -111,14 +111,15 @@ if (selectedCard.style.opacity != 0.3) {
 
     } else if (cardsClicked === 1){
        card1 = selectedCard;
-       card1Class = card1.getAttribute("class");
-
     }
-    selectedCard.classList.toggle('hide-card');
+    
 
 }    
 }
 
+/**
+ * Once two cards have been selected it disables clicking cards for a few seconds and then flips them back around
+ */
 function flipCards(){
 
     toggleButtons();
