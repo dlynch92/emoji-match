@@ -31,6 +31,7 @@
     max-height: 75px;
 }
 
+
 .crying-emoji{
     background: url(../images/crying-emoji.webp) center/75% no-repeat;;
 }
@@ -83,10 +84,40 @@
 #score-display > button{
     flex-basis: 100%;
 }
+
+#start-screen{
+    height: 535px;
+}
+
 #game-screen{
     display: none;
+    height: 535px;
 }
 
 #end-screen{
     display: none;
+    height: 535px;
 }
+
+#start-screen > .emoji-card{
+    margin: none;
+    border: none;
+}
+
+#start-screen > p{
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+#start-screen > h2{
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+}
+
+#start-screen > .start-button{
+    width: 100%;
+
+}
+
