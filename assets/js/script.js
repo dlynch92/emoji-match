@@ -126,7 +126,11 @@ if (selectedCard.style.opacity != 0.3) {
  */
 function flipCards(){
 
-    toggleButtons();
+    //give slight timeout while this function excecutes in order to ensure all tiles are visibly disabled before moving on
+    setTimeout(function() {
+        toggleButtons();
+    }, 10);
+    
 
     setTimeout(function() {
         firstSelectedCard.classList.toggle('hide-card');
