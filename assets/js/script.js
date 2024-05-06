@@ -2,8 +2,8 @@ let cardsClicked = 0;
 const cards = document.querySelectorAll(".emoji-card");
 let score = 0;
 let timer;
-let card1;
-let card2;
+let firstSelectedCard;
+let secondSelectedCard;
 let buttonsDisabled = false;
 let pairsMade = 0;
 
@@ -96,8 +96,8 @@ if (selectedCard.style.opacity != 0.3) {
     cardsClicked++;
 
     if (cardsClicked === 2){
-        card2 = selectedCard;
-        if (card1.getAttribute("class") === card2.getAttribute("class")){
+        secondSelectedCard = selectedCard;
+        if (firstSelectedCard.getAttribute("class") === secondSelectedCard.getAttribute("class")){
             console.log("woooo");
             pairsMade++;
             incrementScore();
@@ -110,7 +110,7 @@ if (selectedCard.style.opacity != 0.3) {
         cardsClicked = 0;
 
     } else if (cardsClicked === 1){
-       card1 = selectedCard;
+       firstSelectedCard = selectedCard;
     }
     
 
@@ -125,8 +125,8 @@ function flipCards(){
     toggleButtons();
 
     setTimeout(function() {
-        card1.classList.toggle('hide-card');
-        card2.classList.toggle('hide-card');
+        firstSelectedCard.classList.toggle('hide-card');
+        secondSelectedCard.classList.toggle('hide-card');
         toggleButtons();
       }, 2000);
   
@@ -147,10 +147,10 @@ function incrementScore() {
  */
 function removeEmoji() {
 
-    card1.style.opacity = (0.3);
-    card1.style.borderColor = "transparent";
-    card2.style.opacity = (0.3);
-    card2.style.borderColor = "transparent";
+    firstSelectedCard.style.opacity = (0.3);
+    firstSelectedCard.style.borderColor = "transparent";
+    secondSelectedCard.style.opacity = (0.3);
+    secondSelectedCard.style.borderColor = "transparent";
  }
 
 /**
