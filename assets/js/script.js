@@ -7,6 +7,7 @@ let card2;
 let card1Class;
 let card2Class;
 let buttonsDisabled = false;
+let pairsMade = 0;
 
 // for of loop checks for any button presses once the dom content has loaded
 
@@ -65,10 +66,11 @@ function startGame() {
  */
 function shuffleEmojis() {
     
+    pairsMade = 0;
     cardsClicked = 0;
     score = 0;
     document.getElementById("score").innerHTML = score;
-    
+
         for (let i = 0; i < cards.length; i++) {
             let changeOrder = Math.floor(Math.random() * 15);
             cards[i].style.order = changeOrder;
@@ -97,12 +99,13 @@ if (selectedCard.style.opacity != 0.3) {
         card2Class = card2.getAttribute("class");
         if (card1Class === card2Class){
             console.log("woooo");
+            pairsMade++;
             incrementScore();
-            removeEmoji(card1, card2);
+            removeEmoji();
         } else {
             console.log("awww");
             incrementScore();
-            flipCards(card1, card2);
+            flipCards();
         }
         cardsClicked = 0;
 
@@ -116,7 +119,7 @@ if (selectedCard.style.opacity != 0.3) {
 }    
 }
 
-function flipCards(card1, card2){
+function flipCards(){
 
     toggleButtons();
 
@@ -131,15 +134,17 @@ function flipCards(card1, card2){
  * Increments the score if the selected tiles are not a match
  */
 function incrementScore() {
-
     score++;
     document.getElementById("score").innerHTML = score;
+    if (pairsMade === 8) {
+        endGame();
+    }
 }
 
 /**
  * Removes the emojis from the grid if the user has found a match
  */
-function removeEmoji(card1, card2) {
+function removeEmoji() {
 
     card1.style.opacity = (0.3);
     card1.style.borderColor = "transparent";
