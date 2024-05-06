@@ -66,6 +66,11 @@
 
 .hide-card{
     background: url(../images/question-mark.png) center/75% no-repeat;
+    cursor: pointer;
+}
+
+.start-button{
+    cursor: pointer;
 }
 
 /*flex for cards */
@@ -81,22 +86,20 @@
     justify-content: space-around;
 }
 
-#score-display > button{
-    flex-basis: 100%;
-}
-
-#start-screen{
-    height: 535px;
-}
-
 #game-screen{
     display: none;
     height: 535px;
 }
 
-#end-screen{
-    display: none;
+
+/*styles for start screen*/
+
+#start-screen{
     height: 535px;
+}
+
+#score-display > button{
+    flex-basis: 100%;
 }
 
 #start-screen > .emoji-card{
@@ -118,6 +121,10 @@
 
 #start-screen > .start-button{
     width: 100%;
-
 }
 
+/*styles for end screen */
+#end-screen{
+    display: none;
+    height: 535px;
+}
