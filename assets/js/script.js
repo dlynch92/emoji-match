@@ -1,11 +1,13 @@
 let cardsClicked = 0;
 const cards = document.querySelectorAll(".emoji-card");
 let score = 0;
-let timer;
+let timer = 0;
 let firstSelectedCard;
 let secondSelectedCard;
 let buttonsDisabled = false;
 let pairsMade = 0;
+
+setInterval(updateTimer, 1000);
 
 // for of loop checks for any button presses once the dom content has loaded
 
@@ -16,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
             let buttonDataType = this.getAttribute("data-type");
             switch (buttonDataType){
                 case "start":
+                    timer = 0;
+                    document.getElementById("timer").innerHTML = timer;
                     startGame();
                     break;
                 case "end": 
@@ -24,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 case "card":
                     //let cardType = this.getAttribute("class");
                     let selectedCard = this;
+                    this.buttonsDisabled;
                     console.log(selectedCard);
                     clickOnEmoji(selectedCard);
                     break;
@@ -67,6 +72,7 @@ function shuffleEmojis() {
     pairsMade = 0;
     cardsClicked = 0;
     score = 0;
+    
     document.getElementById("score").innerHTML = score;
 
         for (let i = 0; i < cards.length; i++) {
@@ -107,14 +113,13 @@ if (selectedCard.style.opacity != 0.3) {
             incrementScore();
             flipCards();
         }
+
         cardsClicked = 0;
 
-    } else if (cardsClicked === 1){
-       firstSelectedCard = selectedCard;
-    }
-    
-
-}    
+        } else if (cardsClicked === 1){
+            firstSelectedCard = selectedCard;
+        }
+    }    
 }
 
 /**
@@ -180,4 +185,9 @@ function endGame() {
     let endScreen = document.getElementById("end-screen");
     endScreen.style.display = "block";
     gameScreen.style.display = "none";
+}
+
+function updateTimer() {
+    timer++;
+    document.getElementById("timer").innerHTML = timer;
 }
