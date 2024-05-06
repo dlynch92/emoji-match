@@ -67,7 +67,8 @@ function shuffleEmojis() {
     
     cardsClicked = 0;
     score = 0;
-
+    document.getElementById("score").innerHTML = score;
+    
         for (let i = 0; i < cards.length; i++) {
             let changeOrder = Math.floor(Math.random() * 15);
             cards[i].style.order = changeOrder;
@@ -160,9 +161,9 @@ for (let i = 0; i < cards.length; i++){
     } else {
         console.log("buttons enabled");
         cards[i].disabled = false;
-    }
+        }
     
-}
+    }
 
 }
 /**
