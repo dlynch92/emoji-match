@@ -34,6 +34,7 @@
 
 .crying-emoji{
     background: url(../images/crying-emoji.webp) center/75% no-repeat;;
+    
 }
 
 .eye-roll-emoji{
@@ -67,6 +68,7 @@
 .hide-card{
     background: url(../images/question-mark.png) center/75% no-repeat;
     cursor: pointer;
+    background-color:rgb(131, 232, 128);
 }
 
 .start-button{

@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 case "card":
                     //let cardType = this.getAttribute("class");
                     let selectedCard = this;
-                    this.buttonsDisabled;
                     console.log(selectedCard);
                     clickOnEmoji(selectedCard);
                     break;
