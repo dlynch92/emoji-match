@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     startGame();
                     break;
                 case "end": 
-                    endGame();
+                    let resign = true;
+                    endGame(resign);
                     break;
                 case "card":
                     //let cardType = this.getAttribute("class");
@@ -146,8 +147,7 @@ function incrementScore() {
     score++;
     document.getElementsByClassName("score")[0].innerHTML = score;
     if (pairsMade === 8) {
-        finalTime = timer;
-        endGame(finalTime);
+        endGame();
     }
 }
 
@@ -182,15 +182,22 @@ for (let i = 0; i < cards.length; i++){
 
 }
 /**
- * Hide game area after a game has ended and display the end screen
+ * Hide game area after a game has ended and display the end screen, displaying results
  */
-function endGame(finalTime) {
+function endGame(resign) {
+    let finalTime = timer;
     let gameScreen = document.getElementById("game-screen");
     let endScreen = document.getElementById("end-screen");
     endScreen.style.display = "block";
     gameScreen.style.display = "none";
     document.getElementById("timer-final").innerHTML = finalTime;
     document.getElementsByClassName("score")[1].innerHTML = score;
+
+    if (resign === true){
+        document.getElementById("win-lose").innerHTML = "You Lose!";
+    } else {
+        document.getElementById("win-lose").innerHTML = "You Win!";
+    }
 }
 
 function updateTimer() {
