@@ -27,7 +27,7 @@
 /* display settings for the cards themselves*/
 .emoji-card{
     padding: 40px 40px;
-    margin: 14px;
+    margin: 14px 15px;
     max-width: 75px;
     max-height: 75px;
 }

@@ -57,7 +57,7 @@
 
             </div>
             <div id="score-display">
-                <p>Guesses: <span id="score">0</span></p>
+                <p>Guesses: <span class="score">0</span></p>
                 <p>Time Spent: <span id="timer">0</span></p>
                 <button data-type="end" class="start-button">Resign</button>
             </div>
@@ -65,7 +65,9 @@
 
         <!-- Game has ended, shows scores and has replay button that resets the game-->
         <div id="end-screen">
-            <p> this is the end-screen </p>
+            <h2 id="winLose"> You Win!</h2>
+            <p> Guesses: <span class="score">0</span> </p>
+            <p> Time Spent: <span id="timer-final">0</span></p>
             <button data-type="start" class="start-button">Start Game</button>
         </div>
     </div>

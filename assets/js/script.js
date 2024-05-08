@@ -72,7 +72,7 @@ function shuffleEmojis() {
     cardsClicked = 0;
     score = 0;
     
-    document.getElementById("score").innerHTML = score;
+    document.getElementsByClassName("score")[0].innerHTML = score;
 
         for (let i = 0; i < cards.length; i++) {
             let changeOrder = Math.floor(Math.random() * 15);
@@ -140,13 +140,14 @@ function flipCards(){
   
 }
 /**
- * Increments the score if the selected tiles are not a match
+ * Increments the score if the selected tiles are not a match, end game when all pairs are made
  */
 function incrementScore() {
     score++;
-    document.getElementById("score").innerHTML = score;
+    document.getElementsByClassName("score")[0].innerHTML = score;
     if (pairsMade === 8) {
-        endGame();
+        finalTime = timer;
+        endGame(finalTime);
     }
 }
 
@@ -183,11 +184,13 @@ for (let i = 0; i < cards.length; i++){
 /**
  * Hide game area after a game has ended and display the end screen
  */
-function endGame() {
+function endGame(finalTime) {
     let gameScreen = document.getElementById("game-screen");
     let endScreen = document.getElementById("end-screen");
     endScreen.style.display = "block";
     gameScreen.style.display = "none";
+    document.getElementById("timer-final").innerHTML = finalTime;
+    document.getElementsByClassName("score")[1].innerHTML = score;
 }
 
 function updateTimer() {
