@@ -29,8 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 case "card":
                     //let cardType = this.getAttribute("class");
                     let selectedCard = this;
-                    console.log(selectedCard);
-                    clickOnEmoji(selectedCard);
+
+                    if (selectedCard != firstSelectedCard){
+                        clickOnEmoji(selectedCard);
+                    } 
+
                     break;
                 case "default":
                     console.log("default");
