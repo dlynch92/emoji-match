@@ -185,9 +185,11 @@ for (let i = 0; i < cards.length; i++){
  * Hide game area after a game has ended and display the end screen, displaying results
  */
 function endGame(resign) {
+
     let finalTime = timer;
     let gameScreen = document.getElementById("game-screen");
     let endScreen = document.getElementById("end-screen");
+
     endScreen.style.display = "block";
     gameScreen.style.display = "none";
     document.getElementById("timer-final").innerHTML = finalTime;
@@ -198,9 +200,40 @@ function endGame(resign) {
     } else {
         document.getElementById("win-lose").innerHTML = "You Win!";
     }
+
+    calculateRanking(finalTime, score)
+
 }
 
+/**
+ * Updates the timer while the game is being played
+ */
 function updateTimer() {
     timer++;
     document.getElementById("timer").innerHTML = timer;
+}
+
+/**
+ * Calculates and displays the ranking after the game has ended
+ */
+function calculateRanking(finalTime, score) {
+
+    let ranking = Math.floor(score / 3) + Math.floor(finalTime / 10);
+    let starTotal;
+
+    if (ranking <= 10) {
+        starTotal = 5;
+    } else if (ranking >= 11 && ranking <= 20) {
+        starTotal = 4;
+    } else if (ranking >=21 && ranking <= 30) {
+        starTotal = 3;
+    } else if (ranking >= 31 && ranking <= 45) {
+        starTotal = 2;
+    } else {
+        starTotal = 1;
+    }
+ 
+    console.log(ranking + "rank");
+    console.log(starTotal + "stars");
+    document.getElementById("ranking").src = "assets/images/star-rating-" + starTotal + ".png";
 }

@@ -131,3 +131,10 @@
     display: none;
     height: 535px;
 }
+
+#end-screen > #ranking {
+    height: 10%;
+     width: 50%;
+    object-fit: contain;
+      
+}
