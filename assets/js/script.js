@@ -255,7 +255,7 @@ function assignEndMessage (starTotal){
     const endMessages4Stars = ["Nearly 5 stars. Try again, you can do it!", "You're on the cusp of greatness, try again?", "Pretty impressive, but there's still one more star to get.", "4 stars is better than 1, 2 or 3 stars but less good than 5. Quick maths.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
     const endMessages5Stars = ["5 Stars! What a hero.", "Can't get much better than that, good job!", "Need more of a challenge? This is all we have unfortunately, there wasn't time to implement difficulty options.", "Quick and efficient! Look at all those stars.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
     let pickMessage;
-console.log(starTotal + " Star Total in End Message")
+
     if (starTotal <= 3 && starTotal > 0 ){
         pickMessage = Math.floor(Math.random() * endMessages1To3Stars.length);
         document.getElementById("end-message").innerHTML = endMessages1To3Stars[pickMessage];

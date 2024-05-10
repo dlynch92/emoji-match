@@ -165,3 +165,8 @@
 #ranking-display > #end-message{
     flex-basis: 100%;
 }
+
+#end-screen > button{
+    width: 100%;
+    margin-top: 10px;
+}
