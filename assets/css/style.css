@@ -152,7 +152,7 @@
     justify-content: center;
     flex-basis: 100%;
     margin: 2px;
-    font-weight: bold;;
+    font-weight: bold;
     
 }
 
@@ -166,7 +166,39 @@
     flex-basis: 100%;
 }
 
-#end-screen > button{
+#table-display {
+    position: relative;
+}
+
+#table-display > button{
     width: 100%;
     margin-top: 10px;
+    position: absolute;
+    left: 0;
+    top: 260px;
+
+}
+
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    
+}
+
+th {
+    font-weight: bold;
+    width: 33%;
+}
+
+#table-display > h2 {
+    margin-bottom: 0px;
+    font-weight: bold;
 }

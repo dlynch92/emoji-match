@@ -6,11 +6,12 @@ let firstSelectedCard;
 let secondSelectedCard;
 let buttonsDisabled = false;
 let pairsMade = 0;
+let leaderboardEntries = 0;
 
+//updates timer every second
 setInterval(updateTimer, 1000);
 
 // for of loop checks for any button presses once the dom content has loaded
-
 document.addEventListener("DOMContentLoaded", function() {
     let buttonsClickable = document.getElementsByTagName("button");
     for (let button of buttonsClickable){
@@ -180,10 +181,9 @@ for (let i = 0; i < cards.length; i++){
         console.log("buttons enabled");
         cards[i].disabled = false;
         }
-    
     }
-
 }
+
 /**
  * Hide game area after a game has ended and display the end screen, displaying results
  */
@@ -241,19 +241,18 @@ function calculateRanking(finalTime, score, resign) {
     console.log(ranking + "rank");
     console.log(starTotal + "stars");
     document.getElementById("ranking").src = "assets/images/star-rating-" + starTotal + ".png";
-    assignEndMessage(starTotal);
+    assignEndMessage(finalTime, starTotal);
 
+}
 
  /**
  * Assigns the displays a randomised message on the end screen based off star ranking achieved
  */
-}
-
-function assignEndMessage (starTotal){
+function assignEndMessage (finalTime, starTotal){
     const endMessagesResign = ["Don't give up! Try again.", "If you finish you'll be given a star ranking. Aim high!", "Clicking randomly only gets you so far.", "Need a tip? Try to memorise a row and go from there!", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
-    const endMessages1To3Stars = ["Try being quicker and making less incorrect matches to increase your score!", "That was just an unlucky run right? Happens to the best of us.", "The journey of a thousand miles begins with a single step, and all that. Try again!", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
-    const endMessages4Stars = ["Nearly 5 stars. Try again, you can do it!", "You're on the cusp of greatness, try again?", "Pretty impressive, but there's still one more star to get.", "4 stars is better than 1, 2 or 3 stars but less good than 5. Quick maths.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
-    const endMessages5Stars = ["5 Stars! What a hero.", "Can't get much better than that, good job!", "Need more of a challenge? This is all we have unfortunately, there wasn't time to implement difficulty options.", "Quick and efficient! Look at all those stars.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
+    const endMessages1To3Stars = ["Try being quicker and making less incorrect matches to increase your score!", "That was just an unlucky run right? Happens to the best of us.", "The journey of a thousand miles begins with a single step. Try again!", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
+    const endMessages4Stars = ["Nearly 5 stars. Try again, you can do it!", "You're on the cusp of greatness, try again?", "Pretty impressive, but there's still one more star to get.", "4 stars is better than 1, 2 or 3 stars but less good than 5.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
+    const endMessages5Stars = ["5 Stars! What a hero.", "Can't get much better than that, good job!", "Need more of a challenge? Grab a blindfold.", "Quick and efficient! Look at all those stars.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
     let pickMessage;
 
     if (starTotal <= 3 && starTotal > 0 ){
@@ -269,6 +268,29 @@ function assignEndMessage (starTotal){
         pickMessage = Math.floor(Math.random() * endMessagesResign.length);
         document.getElementById("end-message").innerHTML = endMessagesResign[pickMessage];
     }
-    
-    
+
+    updateLeaderboard(finalTime, starTotal)
 }
+
+ /**
+ * Updates and displays the contents of the leaderboard
+ */
+ function updateLeaderboard(finalTime, starTotal){
+    let amountOfRows = document.getElementById("leaderboard").rows.length;
+    let table = document.getElementById("leaderboard");
+
+    if (amountOfRows <= 6) {
+    let newRow = table.insertRow(1);
+    let newStar = newRow.insertCell(0);
+    let newGuesses = newRow.insertCell(1);
+    let newTime = newRow.insertCell(2);
+
+    newStar.innerHTML = starTotal;
+    newGuesses.innerHTML = score;
+    newTime.innerHTML = finalTime;
+    }
+    else {
+    console.log("too many rows");
+    }
+  
+ }
