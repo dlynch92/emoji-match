@@ -6,7 +6,6 @@ let firstSelectedCard;
 let secondSelectedCard;
 let buttonsDisabled = false;
 let pairsMade = 0;
-let leaderboardEntries = 0;
 
 //updates timer every second
 setInterval(updateTimer, 1000);
@@ -269,17 +268,20 @@ function assignEndMessage (finalTime, starTotal){
         document.getElementById("end-message").innerHTML = endMessagesResign[pickMessage];
     }
 
-    updateLeaderboard(finalTime, starTotal)
+    updatePreviousScores(finalTime, starTotal)
 }
 
  /**
- * Updates and displays the contents of the leaderboard
+ * Updates and displays the contents of the previous scores table
  */
- function updateLeaderboard(finalTime, starTotal){
-    let amountOfRows = document.getElementById("leaderboard").rows.length;
-    let table = document.getElementById("leaderboard");
+ function updatePreviousScores(finalTime, starTotal){
+    let table = document.getElementById("previous-scores");
+    let amountOfRows = table.rows.length;
 
-    if (amountOfRows <= 6) {
+    if (amountOfRows > 5) {
+        table.deleteRow(5);
+    }
+
     let newRow = table.insertRow(1);
     let newStar = newRow.insertCell(0);
     let newGuesses = newRow.insertCell(1);
@@ -288,9 +290,4 @@ function assignEndMessage (finalTime, starTotal){
     newStar.innerHTML = starTotal;
     newGuesses.innerHTML = score;
     newTime.innerHTML = finalTime;
-    }
-    else {
-    console.log("too many rows");
-    }
-  
- }
+}
