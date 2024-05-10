@@ -196,6 +196,15 @@ th, td {
 th {
     font-weight: bold;
     width: 33%;
+    background-color: rgb(215, 243, 93);
+}
+
+tr:nth-child(even){
+    background-color: rgb(188, 209, 126);
+}
+
+tr:nth-child(odd){
+    background-color: rgb(178, 207, 98);
 }
 
 #table-display > h2 {
