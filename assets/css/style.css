@@ -94,15 +94,14 @@
     height: 535px;
 }
 
+#score-display > button{
+    flex-basis: 100%;
+}
 
 /*styles for start screen*/
 
 #start-screen{
     
-}
-
-#score-display > button{
-    flex-basis: 100%;
 }
 
 #start-screen > .emoji-card{
@@ -128,13 +127,41 @@
 
 /*styles for end screen */
 #end-screen{
-    display: none;
     height: 535px;
+    display: none;
 }
 
-#end-screen > #ranking {
-    height: 10%;
-     width: 50%;
+#ranking-display{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 40%;
+}
+
+#end-screen > * {
+    text-align: center;
+}
+#ranking {
+    height: 5%;
+    width: 50%;
     object-fit: contain;
-      
+    flex-basis: 100%;  
+    margin-bottom: 10px;
+}
+
+#ranking-display > h2 {
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 2px;
+    font-weight: bold;;
+    
+}
+
+#ranking-display > p {
+    flex-basis: 48%;
+    margin: 2px;
+    
+}
+
+#ranking-display > #end-message{
+    flex-basis: 100%;
 }

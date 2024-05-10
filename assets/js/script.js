@@ -204,7 +204,7 @@ function endGame(resign) {
         document.getElementById("win-lose").innerHTML = "You Win!";
     }
 
-    calculateRanking(finalTime, score)
+    calculateRanking(finalTime, score, resign);
 
 }
 
@@ -219,12 +219,14 @@ function updateTimer() {
 /**
  * Calculates and displays the ranking after the game has ended
  */
-function calculateRanking(finalTime, score) {
+function calculateRanking(finalTime, score, resign) {
 
     let ranking = Math.floor(score / 3) + Math.floor(finalTime / 10);
     let starTotal;
-
-    if (ranking <= 10) {
+    
+    if (resign === true){
+        starTotal = 0; 
+    } else if (ranking <= 10) {
         starTotal = 5;
     } else if (ranking >= 11 && ranking <= 20) {
         starTotal = 4;
@@ -239,4 +241,34 @@ function calculateRanking(finalTime, score) {
     console.log(ranking + "rank");
     console.log(starTotal + "stars");
     document.getElementById("ranking").src = "assets/images/star-rating-" + starTotal + ".png";
+    assignEndMessage(starTotal);
+
+
+ /**
+ * Assigns the displays a randomised message on the end screen based off star ranking achieved
+ */
+}
+
+function assignEndMessage (starTotal){
+    const endMessagesResign = ["Don't give up! Try again.", "If you finish you'll be given a star ranking. Aim high!", "Clicking randomly only gets you so far.", "Need a tip? Try to memorise a row and go from there!", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
+    const endMessages1To3Stars = ["Try being quicker and making less incorrect matches to increase your score!", "That was just an unlucky run right? Happens to the best of us.", "The journey of a thousand miles begins with a single step, and all that. Try again!", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
+    const endMessages4Stars = ["Nearly 5 stars. Try again, you can do it!", "You're on the cusp of greatness, try again?", "Pretty impressive, but there's still one more star to get.", "4 stars is better than 1, 2 or 3 stars but less good than 5. Quick maths.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
+    const endMessages5Stars = ["5 Stars! What a hero.", "Can't get much better than that, good job!", "Need more of a challenge? This is all we have unfortunately, there wasn't time to implement difficulty options.", "Quick and efficient! Look at all those stars.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
+    let pickMessage;
+console.log(starTotal + " Star Total in End Message")
+    if (starTotal <= 3 && starTotal > 0 ){
+        pickMessage = Math.floor(Math.random() * endMessages1To3Stars.length);
+        document.getElementById("end-message").innerHTML = endMessages1To3Stars[pickMessage];
+    } else if (starTotal === 4){
+        pickMessage = Math.floor(Math.random() * endMessages4Stars.length);
+        document.getElementById("end-message").innerHTML = endMessages4Stars[pickMessage];
+    } else if (starTotal === 5){
+        pickMessage = Math.floor(Math.random() * endMessages5Stars.length);
+        document.getElementById("end-message").innerHTML = endMessages5Stars[pickMessage];
+    } else {
+        pickMessage = Math.floor(Math.random() * endMessagesResign.length);
+        document.getElementById("end-message").innerHTML = endMessagesResign[pickMessage];
+    }
+    
+    
 }
