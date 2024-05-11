@@ -234,6 +234,7 @@ function calculateRanking(finalTime, score, resign) {
     }
 
     document.getElementById("ranking").src = "assets/images/star-rating-" + starTotal + ".png";
+    document.getElementById("ranking").alt = starTotal + " out of 5 stars.";
     assignEndMessage(finalTime, starTotal);
 
 }
