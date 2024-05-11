@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     endGame(resign);
                     break;
                 case "card":
-                    //let cardType = this.getAttribute("class");
                     let selectedCard = this;
 
                     if (selectedCard != firstSelectedCard){
