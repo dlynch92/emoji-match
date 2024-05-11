@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     break;
                 case "default":
-                    console.log("default");
+                    console.log("error");
             }
         });
     }
@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
 function startGame() {
 
     //check which screen the user is on, hide it and bring up the game screen
-    console.log("button clicked");
     let startScreen = document.getElementById("start-screen");
     let gameScreen = document.getElementById("game-screen");
     let endScreen = document.getElementById("end-screen");
@@ -107,12 +106,10 @@ if (selectedCard.style.opacity != 0.3) {
     if (cardsClicked === 2){
         secondSelectedCard = selectedCard;
         if (firstSelectedCard.getAttribute("class") === secondSelectedCard.getAttribute("class")){
-            console.log("woooo");
             pairsMade++;
             incrementScore();
             removeEmoji();
         } else {
-            console.log("awww");
             incrementScore();
             flipCards();
         }
@@ -175,11 +172,9 @@ function toggleButtons() {
 
 for (let i = 0; i < cards.length; i++){
     if (buttonsDisabled === true){
-        console.log("buttons disabled");
         cards[i].disabled = true;
         resignButton.disabled = true;
     } else {
-        console.log("buttons enabled");
         cards[i].disabled = false;
         resignButton.disabled = false;
         }
@@ -239,8 +234,6 @@ function calculateRanking(finalTime, score, resign) {
         starTotal = 1;
     }
  
-    console.log(ranking + "rank");
-    console.log(starTotal + "stars");
     document.getElementById("ranking").src = "assets/images/star-rating-" + starTotal + ".png";
     assignEndMessage(finalTime, starTotal);
 
