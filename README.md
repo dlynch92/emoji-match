@@ -221,7 +221,7 @@ Manual testing was methodically to ensure the website worked as intended. During
 | Click on an emoji while two none-matching emojis have just been selected | Nothing | Yes |
 | Click on navigation button while two none-matching emojis have just been selected | Nothing | Yes |
 | Click on the same emoji again after revealing it as the first in a pair | Nothing, still able to select a second emoji | Yes |
-| All emojis on the field have been matched | Navigate to end screen with a relevant star rank and messsage, "You Win!" shows at top. Score added to tabel. | Yes |
+| All emojis on the field have been matched | Navigate to end screen with a relevant star rank and messsage, "You Win!" shows at top. Score added to top row of tabel. | Yes |
 | Get each star rank | Relevant star rank image is displayed and a random message from an array is displayed that is relevant to the rank achieved. Score added to top row of tabel. | Yes |
 | More than 5 scores recorded to tabel | Oldest (bottom) score is removed and the new score is added in the top row. | Yes |
    
