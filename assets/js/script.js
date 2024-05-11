@@ -170,19 +170,21 @@ function removeEmoji() {
  */
 function toggleButtons() {
 
-buttonsDisabled = !buttonsDisabled;
+    let resignButton = document.getElementsByClassName("start-button")[1];
+    buttonsDisabled = !buttonsDisabled;
 
 for (let i = 0; i < cards.length; i++){
     if (buttonsDisabled === true){
         console.log("buttons disabled");
         cards[i].disabled = true;
+        resignButton.disabled = true;
     } else {
         console.log("buttons enabled");
         cards[i].disabled = false;
+        resignButton.disabled = false;
         }
     }
 }
-
 /**
  * Hide game area after a game has ended and display the end screen, displaying results
  */
