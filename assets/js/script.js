@@ -220,7 +220,7 @@ function updateTimer() {
  */
 function calculateRanking(finalTime, score, resign) {
 
-    let ranking = Math.floor(score / 3) + Math.floor(finalTime / 10);
+    let ranking = Math.floor(score / 2) + Math.floor(finalTime / 10);
     let starTotal;
     
     if (resign === true){

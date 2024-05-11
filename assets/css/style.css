@@ -28,8 +28,7 @@
 .emoji-card{
     padding: 40px 40px;
     margin: 14px 15px;
-    max-width: 75px;
-    max-height: 75px;
+    
 }
 
 
@@ -72,8 +71,27 @@
     background-color:rgb(131, 232, 128);
 }
 
+/*styles for button at bottom of play area*/
+
 .start-button{
     cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    position: absolute;
+
+}
+
+#score-display > .start-button {
+ top: 47px;
+}
+
+#start-screen > .start-button {
+    top: 493px;
+}
+
+#table-display > .start-button {
+    left: 0;
+    top: 260px;
 }
 
 /*flex for cards */
@@ -87,6 +105,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
 }
 
 #game-screen{
@@ -101,7 +120,7 @@
 /*styles for start screen*/
 
 #start-screen{
-    
+    position: relative;
 }
 
 #start-screen > .emoji-card{
@@ -121,9 +140,6 @@
     margin: 0;
 }
 
-#start-screen > .start-button{
-    width: 100%;
-}
 
 /*styles for end screen */
 #end-screen{
@@ -170,15 +186,6 @@
     position: relative;
 }
 
-#table-display > button{
-    width: 100%;
-    margin-top: 10px;
-    position: absolute;
-    left: 0;
-    top: 260px;
-
-}
-
 table, th, td {
     border: 3px solid black;
     border-collapse: collapse;
@@ -210,4 +217,16 @@ tr:nth-child(odd){
 #table-display > h2 {
     margin-bottom: 0px;
     font-weight: bold;
+}
+
+/* media queries*/
+@media (max-width: 500) {
+
+    .emoji-card{
+        padding: 40px 40px;
+        margin: 14px 15px;
+        width: 50px;
+        height: 50px;
+    }
+
 }
