@@ -220,13 +220,54 @@ tr:nth-child(odd){
 }
 
 /* media queries*/
-@media (max-width: 500) {
+@media (max-width: 500px) {
 
     .emoji-card{
-        padding: 40px 40px;
-        margin: 14px 15px;
-        width: 50px;
-        height: 50px;
+        margin: 14px 10px;
+  
     }
 
+}
+
+@media (max-width: 465px) {
+ 
+    .emoji-card{
+        margin: 5px 1px;
+    }
+
+    #score-display > .start-button {
+        top: 83px;
+       }
+
+    #game-screen {
+        padding-top: 30px;
+    }
+
+}
+
+@media (max-width: 383px) {
+
+    .emoji-card{
+        padding: 32px 32px;
+    }
+
+    #score-display > .start-button {
+        top: 153px;
+       }
+}
+
+@media (max-width: 320px) {
+    
+    .emoji-card{
+        padding: 30px 30px;
+   
+    }
+
+    #score-display > .start-button {
+        top: 162px;
+       }
+
+    .header{
+    font-size: 8vh;
+    }
 }
