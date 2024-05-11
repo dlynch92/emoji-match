@@ -160,8 +160,6 @@ A system like this would be expandable and potentially many other rewards, or ac
     * Deployment of the website and storing the files online.
  * [Google Fonts](https://fonts.google.com/)
     * Import fonts for the website.
-* [Am I Responsive](https://ui.dev/amiresponsive)
-    * Mockup picture for the README file.
 ---
 
 ## Testing
@@ -183,30 +181,54 @@ The JS validator continues to show the warning "Functions declared within loops 
 Shown below are screenshots of the validators as they stand.
 
 <details>
-<summary>Validator Screenshots</summary>
+<summary>Validator Screenshots HTML / CSS / JS</summary>
 
- ![HTML Validator showing no errors](/assets/images/validator-no-errors.png)
 
- ![CSS Validator showing no errors](/assets/images/validator-css-no-errors.png)
+ ![HTML Validator showing no errors](/assets/images/validator-no-errors.png) 
 
- ![JS Validator showing 1 warning](/assets/images/validator-js-1-warning.png)
+
+ ![CSS Validator showing no errors](/assets/images/validator-css-no-errors.png) 
+
+
+ ![JS Validator showing 1 warning](/assets/images/validator-js-1-warning.png) 
 </details>
 
 ### Lighthouse
 
+During testing with lighthouse issues I was alerted to the fact I hadn't labelled aria-labels on buttons - this has been rectified and the results of the web page on mobile and desktop can be found below.
 
+<details>
+<summary>Lighthouse Testing Screenshots Desktop/Mobile</summary>
 
-#### Mobile Analysis
+![Desktop](/assets/images/lighthouse-desktop.png) 
 
-
-#### Desktop Analysis
-
-
+![Mobile](/assets/images/lighthouse-mobile.png) 
+</details>
 
 ### Manual Testing
 
+Manual testing was methodically to ensure the website worked as intended. During development this was achieved through a lot of console.logs to ensure what I intended to happen behind the scenes was happening, but once the website was complete the following tests were done to fully ensure everything worked.
+
+| Test    | Expected Outcome | Outcome Achieved? |
+| -------- | --------------- | ------------------|
+| Navigation button on start screen clicked  | Navigate to game screen, game starts, emojis hidden and timer counting up from 0, guesses set to 0| Yes  |
+| Navigation button on game screen clicked  | Navigate to end screen, 0 stars displayed, random message associated with 0 stars displays, score added to top row of tabel, "You Lose" shows at top.| Yes  |
+| Navigation button on end screen clicked  | Navigate to game screen, game starts, emojis hidden and timer counting up from 0, guesses set to 0| Yes  |
+| Click on first hidden emoji | Emoji reveals itself, stays revealed until a second is selected | Yes |
+| Click on second hidden emoji (No match)| Emoji reveals itself, stays revealed for 3 seconds until both clicked emojis flip back to hidden. User input disabled until the emojis are hidden again. | Yes |
+| Click on second hidden emoji (match) | Emoji reveals itself, the matching pair fade in opacity | Yes |
+| Click on an emoji already associated with a matched pair | Nothing | Yes |
+| Click on an emoji while two none-matching emojis have just been selected | Nothing | Yes |
+| Click on navigation button while two none-matching emojis have just been selected | Nothing | Yes |
+| Click on the same emoji again after revealing it as the first in a pair | Nothing, still able to select a second emoji | Yes |
+| All emojis on the field have been matched | Navigate to end screen with a relevant star rank and messsage, "You Win!" shows at top. Score added to tabel. | Yes |
+| Get each star rank | Relevant star rank image is displayed and a random message from an array is displayed that is relevant to the rank achieved. Score added to top row of tabel. | Yes |
+| More than 5 scores recorded to tabel | Oldest (bottom) score is removed and the new score is added in the top row. | Yes |
+   
 
 ### Bugs Fixed
+
+No bugs were found during manual testing.
 
 ---
 
