@@ -215,14 +215,14 @@ Manual testing was methodically to ensure the website worked as intended. During
 | Navigation button on game screen clicked  | Navigate to end screen, 0 stars displayed, random message associated with 0 stars displays, score added to top row of tabel, "You Lose" shows at top.| Yes  |
 | Navigation button on end screen clicked  | Navigate to game screen, game starts, emojis hidden and timer counting up from 0, guesses set to 0| Yes  |
 | Click on first hidden emoji | Emoji reveals itself, stays revealed until a second is selected | Yes |
-| Click on second hidden emoji (No match)| Emoji reveals itself, stays revealed for 3 seconds until both clicked emojis flip back to hidden. User input disabled until the emojis are hidden again. | Yes |
-| Click on second hidden emoji (match) | Emoji reveals itself, the matching pair fade in opacity | Yes |
+| Click on second hidden emoji (No match)| Emoji reveals itself, stays revealed for 3 seconds until both clicked emojis flip back to hidden. User input disabled until the emojis are hidden again. Guesses total increments by 1. | Yes |
+| Click on second hidden emoji (match) | Emoji reveals itself, the matching pair fade in opacity. Guesses total increments by 1. | Yes |
 | Click on an emoji already associated with a matched pair | Nothing | Yes |
 | Click on an emoji while two none-matching emojis have just been selected | Nothing | Yes |
 | Click on navigation button while two none-matching emojis have just been selected | Nothing | Yes |
 | Click on the same emoji again after revealing it as the first in a pair | Nothing, still able to select a second emoji | Yes |
 | All emojis on the field have been matched | Navigate to end screen with a relevant star rank and messsage, "You Win!" shows at top. Score added to top row of tabel. | Yes |
-| Get each star rank | Relevant star rank image is displayed and a random message from an array is displayed that is relevant to the rank achieved. Score added to top row of tabel. | Yes |
+| Get each star rank | Each star rank is achievable with an appropriately scored game. Once completed and on the end screen the relevant star rank image is displayed and a random message from an array is displayed that is relevant to the rank achieved. Score added to top row of tabel. | Yes |
 | More than 5 scores recorded to tabel | Oldest (bottom) score is removed and the new score is added in the top row. | Yes |
    
 
