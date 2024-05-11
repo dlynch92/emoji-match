@@ -276,8 +276,9 @@ tr:nth-child(odd) {
     #score-display>.start-button {
         top: 153px;
     }
-
-
+    .header {
+        font-size: 8vh;
+    }
 }
 
 @media (max-width: 320px) {
@@ -288,7 +289,7 @@ tr:nth-child(odd) {
     }
 
     #score-display>.start-button {
-        top: 162px;
+        top: 156px;
     }
 
     .header {
