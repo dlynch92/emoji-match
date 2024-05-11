@@ -170,7 +170,7 @@ The following methods of testing were used - W3C HTML and CSS validators, jshint
 
  * index.html was validated using the [W3C Markup Validtor](https://validator.w3.org/)
  * style.css sheet was validated using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
- * script.js was validating using [JSHint](https://jshint.com/) 
+ * script.js was validated using [JSHint](https://jshint.com/) 
 
 During validation I fixed a HTML issue of not displaying alt text for the star ranking, and added some javascript to dynamically change the alt text to go alongside whatever image is shown.
 
