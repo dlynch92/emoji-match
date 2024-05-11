@@ -3,19 +3,19 @@
     font-weight: 450;
 }
 
-.header{
+.header {
     text-align: center;
     font-size: 10vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
-    
+
 }
 
 /*the area of the entire game regardless of the screen*/
-.game-area{
-    background-color:rgb(189, 231, 185);
+.game-area {
+    background-color: rgb(189, 231, 185);
     max-width: 460px;
     margin-left: auto;
     margin-right: auto;
@@ -25,55 +25,62 @@
 }
 
 /* display settings for the cards themselves*/
-.emoji-card{
+.emoji-card {
     padding: 40px 40px;
     margin: 14px 15px;
-    
+
 }
 
+.crying-emoji {
+    background: url(../images/crying-emoji.webp) center/75% no-repeat;
+    ;
 
-.crying-emoji{
-    background: url(../images/crying-emoji.webp) center/75% no-repeat;;
-    
 }
 
-.eye-roll-emoji{
-    background: url(../images/eye-roll-emoji.webp) center/75% no-repeat;;
+.eye-roll-emoji {
+    background: url(../images/eye-roll-emoji.webp) center/75% no-repeat;
+    ;
 }
 
-.grimacing-emoji{
-    background: url(../images/grimacing-emoji.webp) center/75% no-repeat;;
+.grimacing-emoji {
+    background: url(../images/grimacing-emoji.webp) center/75% no-repeat;
+    ;
 }
 
-.neutral-emoji{
-    background: url(../images/neutral-emoji.webp) center/75% no-repeat;;
+.neutral-emoji {
+    background: url(../images/neutral-emoji.webp) center/75% no-repeat;
+    ;
 }
 
-.sad-emoji{
-    background: url(../images/sad-emoji.webp) center/75% no-repeat;;
+.sad-emoji {
+    background: url(../images/sad-emoji.webp) center/75% no-repeat;
+    ;
 }
 
-.smiling-emoji{
-    background: url(../images/smiling-emoji.webp) center/75% no-repeat;;
+.smiling-emoji {
+    background: url(../images/smiling-emoji.webp) center/75% no-repeat;
+    ;
 }
 
-.surprised-emoji{
-    background: url(../images/surprised-emoji.webp) center/75% no-repeat;;
+.surprised-emoji {
+    background: url(../images/surprised-emoji.webp) center/75% no-repeat;
+    ;
 }
 
-.tongue-emoji{
-    background: url(../images/tongue-emoji.webp) center/75% no-repeat;;
+.tongue-emoji {
+    background: url(../images/tongue-emoji.webp) center/75% no-repeat;
+    ;
 }
 
-.hide-card{
+.hide-card {
     background: url(../images/question-mark.png) center/75% no-repeat;
     cursor: pointer;
-    background-color:rgb(131, 232, 128);
+    background-color: rgb(131, 232, 128);
 }
 
 /*styles for button at bottom of play area*/
 
-.start-button{
+.start-button {
     cursor: pointer;
     width: 100%;
     margin-top: 10px;
@@ -81,68 +88,68 @@
 
 }
 
-#score-display > .start-button {
- top: 47px;
+#score-display>.start-button {
+    top: 47px;
 }
 
-#start-screen > .start-button {
+#start-screen>.start-button {
     top: 493px;
 }
 
-#table-display > .start-button {
+#table-display>.start-button {
     left: 0;
     top: 260px;
 }
 
 /*flex for cards */
-#card-display{
+#card-display {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#score-display{
+#score-display {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
 }
 
-#game-screen{
+#game-screen {
     display: none;
     height: 535px;
 }
 
-#score-display > button{
+#score-display>button {
     flex-basis: 100%;
 }
 
 /*styles for start screen*/
 
-#start-screen{
+#start-screen {
     position: relative;
 }
 
-#start-screen-emoji{
+#start-screen-emoji {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#start-screen-emoji > .emoji-card{
+#start-screen-emoji>.emoji-card {
     margin: none;
     border: none;
-margin-left: 1%;
-    
+    margin-left: 1%;
+
 }
 
-#start-screen > p{
+#start-screen>p {
     text-align: center;
     margin-top: 8px;
     margin-bottom: 14px;
 }
 
-#start-screen > h2{
+#start-screen>h2 {
     text-align: center;
     padding: 0px;
     margin: 0;
@@ -150,43 +157,44 @@ margin-left: 1%;
 
 
 /*styles for end screen */
-#end-screen{
+#end-screen {
     height: 535px;
     display: none;
 }
 
-#ranking-display{
+#ranking-display {
     display: flex;
     flex-wrap: wrap;
     max-height: 40%;
 }
 
-#end-screen > * {
+#end-screen>* {
     text-align: center;
 }
+
 #ranking {
     height: 5%;
     width: 50%;
     object-fit: contain;
-    flex-basis: 100%;  
+    flex-basis: 100%;
     margin-bottom: 10px;
 }
 
-#ranking-display > h2 {
+#ranking-display>h2 {
     justify-content: center;
     flex-basis: 100%;
     margin: 2px;
     font-weight: bold;
-    
+
 }
 
-#ranking-display > p {
+#ranking-display>p {
     flex-basis: 48%;
     margin: 2px;
-    
+
 }
 
-#ranking-display > #end-message{
+#ranking-display>#end-message {
     flex-basis: 100%;
 }
 
@@ -194,18 +202,21 @@ margin-left: 1%;
     position: relative;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 3px solid black;
     border-collapse: collapse;
-  }
+}
 
 table {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     text-align: center;
-    
+
 }
 
 th {
@@ -214,15 +225,15 @@ th {
     background-color: rgb(215, 243, 93);
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
     background-color: rgb(188, 209, 126);
 }
 
-tr:nth-child(odd){
+tr:nth-child(odd) {
     background-color: rgb(178, 207, 98);
 }
 
-#table-display > h2 {
+#table-display>h2 {
     margin-bottom: 0px;
     font-weight: bold;
 }
@@ -230,23 +241,22 @@ tr:nth-child(odd){
 /* media queries*/
 @media (max-width: 500px) {
 
-    .emoji-card{
+    .emoji-card {
         margin: 14px 10px;
-  
+
     }
 
-   
 }
 
 @media (max-width: 465px) {
- 
-    .emoji-card{
+
+    .emoji-card {
         margin: 5px 1px;
     }
 
-    #score-display > .start-button {
+    #score-display>.start-button {
         top: 83px;
-       }
+    }
 
     #game-screen {
         padding-top: 30px;
@@ -254,34 +264,34 @@ tr:nth-child(odd){
 
     p {
         font-size: 15px;
-       }
+    }
 }
 
 @media (max-width: 383px) {
 
-    .emoji-card{
+    .emoji-card {
         padding: 32px 32px;
     }
 
-    #score-display > .start-button {
+    #score-display>.start-button {
         top: 153px;
-       }
+    }
 
-     
+
 }
 
 @media (max-width: 320px) {
-    
-   .emoji-card{
+
+    .emoji-card {
         padding: 30px 30px;
-   
+
     }
 
-   #score-display > .start-button {
+    #score-display>.start-button {
         top: 162px;
-       }
+    }
 
-    .header{
-    font-size: 8vh;
+    .header {
+        font-size: 8vh;
     }
 }
