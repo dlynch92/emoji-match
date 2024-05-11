@@ -243,10 +243,10 @@ function calculateRanking(finalTime, score, resign) {
  * Assigns the displays a randomised message on the end screen based off star ranking achieved
  */
 function assignEndMessage (finalTime, starTotal){
-    const endMessagesResign = ["Don't give up! Try again.", "If you finish you'll be given a star ranking. Aim high!", "Clicking randomly only gets you so far.", "Need a tip? Try to memorise a row and go from there!", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
+    const endMessagesResign = ["Don't give up! Take a deep breath and try again.", "If you finish you'll be given a star ranking. Aim high!", "Clicking randomly only gets you so far - have a strategy!", "Need a tip? Try to memorise a row and go from there!", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
     const endMessages1To3Stars = ["Try being quicker and making less incorrect matches to increase your score!", "That was just an unlucky run right? Happens to the best of us.", "The journey of a thousand miles begins with a single step. Try again!", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
     const endMessages4Stars = ["Nearly 5 stars. Try again, you can do it!", "You're on the cusp of greatness, try again?", "Pretty impressive, but there's still one more star to get.", "4 stars is better than 1, 2 or 3 stars but less good than 5.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"]
-    const endMessages5Stars = ["5 Stars! What a hero.", "Can't get much better than that, good job!", "Need more of a challenge? Grab a blindfold.", "Quick and efficient! Look at all those stars.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
+    const endMessages5Stars = ["5 Stars! What a hero, you're pretty good at this.", "Can't get much better than that, good job!", "Need more of a challenge? Grab a blindfold.", "Quick and efficient! Look at all those stars.", "Shigetaka Kurita invented Emojis in 1999. Thanks Kurita!"];
     let pickMessage;
 
     if (starTotal <= 3 && starTotal > 0 ){
