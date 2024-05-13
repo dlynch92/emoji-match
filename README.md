@@ -80,41 +80,88 @@ The greens are used for the play area and the cards, while the more yellow colou
 * Responsive on all device sizes.
 
 ### Navigation
+<details>
+<summary>Navigation Button Screenshot</summary>
+
+![Navigation](/readme-images/feature-navigation.png) 
+</details>  
+   
 * Placed at the bottom of each screen of the game and can be clicked to move onto the next screen.
 * Labelled differently depending on the page to indicate to the user the function of the button. On the start screen is "start game", in the game screen it is "resign", and on the end screen it is "new game". Both the start screen and the end screen take the user to the game screen, while the game screen takes the user to the end screen.
 
 ### Start Screen
+<details>
+<summary>Start Screen Screenshot</summary>
+
+![Start](/readme-images/feature-start-screen.png) 
+</details>  
+
 * Displays the emojis that will be used in the game so the user can get familiar with them before playing and also just to look aesthetically pleasing.
 * Tells the user the rules of the game in case they aren't familiar.
 
 ### Game Screen
 #### Interactable cards
+<details>
+<summary>Interactable Cards Screenshot</summary>
+
+![Cards](/readme-images/feature-cards.png) 
+</details>  
+
 * Cards are shuffled and in different places each time the user starts a new game.
 * Initially covered by a question mark until the user clicks on them which uncovers the emoji underneath. Once a second card is clicked, if no match is made there is a 3 second window where user input can't be taken before the two cards turn back around and the guesses counter is iterated. If a pair is made the emojis stay revealed and are reduced in opacity and can no longer be selected.
 * Once all pairs have been made the game is won and the user is taken to the end screen.
 
 #### Guesses
+<details>
+<summary>Guesses Screenshot</summary>
+
+![Guesses](/readme-images/feature-guesses.png) 
+</details>  
+
 * A counter below the game screen that iterates when two cards are selected, regardless of whether a matching pair was found or not.
 * Used in part to calculate the star ranking on the end screen - the lower the number the better.
 
 #### Timer
+<details>
+<summary>Timer Screenshot</summary>
+
+![Timer](/readme-images/feature-time.png) 
+</details>  
+
 * A timer below the game screen that iterates every second and counts up from 0 when the game is started.
 * Used in part to calculate the star ranking on the end screen - the lower the number the better.
 
 ### End Screen
 
 #### Star Ranking
+<details>
+<summary>Star Ranking Screenshot</summary>
+
+![Stars](/readme-images/feature-stars.png) 
+</details>  
+
 * Displays an image showing 0-5 stars depending on the guesses and timer from the game screen. The guess counter and the timer are divided by an amount and then added together, with that number being turned into a star rank.
 * Shows 0 stars when a player does not finish and instead clicks the resign button.
 
 #### Randomised Messages
-* A message displayed under the star ranking that is dependant on the ranking the player has achieved.
+<details>
+<summary>Randomised Messages Screenshot</summary>
+
+![Messages](/readme-images/feature-message.png) 
+</details>  
+
+* A random message is displayed under the star ranking that is dependant on the ranking the player has achieved.
 * 0 stars encourages them to try and finish a match.
 * 1-3 stars encourages them to try and finish with a better score.
 * 4 stars tempts them into trying to get 5 stars due to being so close.
 * 5 stars congratulates them on achieving the maximum rank.
 
 #### Previous Score Table
+<details>
+<summary>Previous Score Table Screenshot</summary>
+
+![Previous Scores](/readme-images/feature-scores.png) 
+</details>  
 * Headers of Star Ranking, Guesses and Time.
 * Adds the above from the game that has just finished to the table and is persistent throughout the session.
 * The 5 most recent games are shown, with the oldest one being removed once more than that has accrued. 
