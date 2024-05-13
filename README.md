@@ -108,7 +108,7 @@ The greens are used for the play area and the cards, while the more yellow colou
 </details>  
 
 * Cards are shuffled and in different places each time the user starts a new game.
-* Initially covered by a question mark until the user clicks on them which uncovers the emoji underneath. Once a second card is clicked, if no match is made there is a 3 second window where user input can't be taken before the two cards turn back around and the guesses counter is iterated. If a pair is made the emojis stay revealed and are reduced in opacity and can no longer be selected.
+* Initially covered by a question mark until the user clicks on them which uncovers the emoji underneath. Once a second card is clicked, if no match is made there is a 1.5 window where user input can't be taken before the two cards turn back around and the guesses counter is iterated. If a pair is made the emojis stay revealed and are reduced in opacity and can no longer be selected.
 * Once all pairs have been made the game is won and the user is taken to the end screen.
 
 #### Guesses
