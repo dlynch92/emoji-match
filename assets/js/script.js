@@ -136,7 +136,7 @@ function flipCards() {
         firstSelectedCard.classList.toggle('hide-card');
         secondSelectedCard.classList.toggle('hide-card');
         toggleButtons();
-    }, 2000);
+    }, 1500);
 
 }
 /**
