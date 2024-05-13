@@ -142,7 +142,7 @@ A system like this would be expandable and potentially many other rewards, or ac
 
 ---
 
-## Technologies Used /
+## Technologies Used
 
  * [HTML5](https://en.wikipedia.org/wiki/HTML5)
  * [CSS3](https://en.wikipedia.org/wiki/CSS)
@@ -150,7 +150,7 @@ A system like this would be expandable and potentially many other rewards, or ac
 
 ---
 
-## Frameworks, Libraries & Programs Used /
+## Frameworks, Libraries & Programs Used
 
  * [Visual Studio Code](https://code.visualstudio.com/)
     * To write the code.
