@@ -59,7 +59,7 @@ Basic concepts were drawn on pen and paper in the initial planning stages of the
 
  * Colour Scheme
     * The colours used on the website are as follows:
-    ![Colour Palette](/assets/images/colour-scheme.png)
+    ![Colour Palette](/readme-images/colour-scheme.png)
     * Colour palette was generated with the help of [Colormind.io](http://colormind.io/)
 
 The greens are used for the play area and the cards, while the more yellow colours are used for the table on the end screen. I felt the greens looked good and the slight contrast between the two worked well in the play area, and had the table be yellow to be consistent with the colours of emojis. As well as these, text is black and the background of the page is white.
@@ -176,13 +176,13 @@ The following methods of testing were used - W3C HTML and CSS validators, jshint
 <summary>Validator Screenshots HTML / CSS / JS</summary>
 
 
- ![HTML Validator showing no errors](/assets/images/validator-no-errors.png) 
+ ![HTML Validator showing no errors](/readme-images/validator-no-errors.png) 
 
 
- ![CSS Validator showing no errors](/assets/images/validator-css-no-errors.png) 
+ ![CSS Validator showing no errors](/readme-images/validator-css-no-errors.png) 
 
 
- ![JS Validator showing 1 warning](/assets/images/validator-js-1-warning.png) 
+ ![JS Validator showing 1 warning](/readme-images/validator-js-1-warning.png) 
 </details>
 
 ### Lighthouse
@@ -190,9 +190,9 @@ The following methods of testing were used - W3C HTML and CSS validators, jshint
 <details>
 <summary>Lighthouse Testing Screenshots Desktop/Mobile</summary>
 
-![Desktop](/assets/images/lighthouse-desktop.png) 
+![Desktop](/readme-images/lighthouse-desktop.png) 
 
-![Mobile](/assets/images/lighthouse-mobile.png) 
+![Mobile](/readme-images/lighthouse-mobile.png) 
 </details>
 
 ### Manual Testing
