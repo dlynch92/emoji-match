@@ -12,7 +12,7 @@ The project consists of one HTML page that it is split into three seperate "scre
 ### [User Experience (UX)](#user-experience-ux-1)
 ### [Design](#design-1)
 ### [Features](#features-1)
-* [Unimplemented Features](#unimplemented-features)
+* [Future Features](#future-features)
 ### [Technologies Used](#technologies-used-1)
 ### [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used-1)
 ### [Testing](#testing-1)
@@ -119,9 +119,9 @@ The greens are used for the play area and the cards, while the more yellow colou
 * Adds the above from the game that has just finished to the table and is persistent throughout the session.
 * The 5 most recent games are shown, with the oldest one being removed once more than that has accrued. 
 
-### Unimplemented Features
+### Future Features
 
-Not all features envisioned for the project were implemented due to time constraints. Below are the features that, given more time, would be implemented and add to the user experience.
+Several potential features that further improve the game have been indentified and could be implemented in the future. 
 
 #### Leaderboard
 
