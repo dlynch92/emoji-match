@@ -172,14 +172,6 @@ The following methods of testing were used - W3C HTML and CSS validators, jshint
  * style.css sheet was validated using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
  * script.js was validated using [JSHint](https://jshint.com/) 
 
-During validation I fixed a HTML issue of not displaying alt text for the star ranking, and added some javascript to dynamically change the alt text to go alongside whatever image is shown.
-
-I also fixed a small CSS error where I had set margin: none, which does not exist.
-
-The JS validator continues to show the warning "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics." Functionally the code works fine and I feel is layed out simply enough to follow so I have decided not to change this. It is obviously a best practise to keep in mind going forward as the code I write becomes more complex. During validation there were 3 missing semicolons that I fixed.
-
-Shown below are screenshots of the validators as they stand.
-
 <details>
 <summary>Validator Screenshots HTML / CSS / JS</summary>
 
@@ -194,8 +186,6 @@ Shown below are screenshots of the validators as they stand.
 </details>
 
 ### Lighthouse
-
-During testing with lighthouse issues I was alerted to the fact I hadn't labelled aria-labels on buttons - this has been rectified and the results of the web page on mobile and desktop can be found below.
 
 <details>
 <summary>Lighthouse Testing Screenshots Desktop/Mobile</summary>
@@ -228,7 +218,12 @@ Manual testing was methodically to ensure the website worked as intended. During
 
 ### Bugs Fixed
 
-No bugs were found during manual testing.
+| Test    | Expected Outcome | Outcome | How was it fixed?  |
+| -------- | --------------- | ------------------|-------------------|
+| Run HTML validator | No errors | 1 error - no alt text for the star ranking image. | Alt text added to the basic star ranking image on index.html, and javascript was added to dynmically change the alt text depending on what ranking displays at the end. |
+| Run CSS validator | No errors | 1 error - a line was set to margin: none | Deleted margin: none line. |
+| Run JS validator | No errors | 3 errors - missing semicolons | Semicolons added to javascript code |
+| Run Lighthouse testing | All sections for mobile and desktop green with no major issues | Accessibility was orange - missing aria-labels on buttons | Aria-labels added to buttons | 
 
 ---
 
